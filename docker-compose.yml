@@ -2,3 +2,13 @@ web:
   build: .
   ports:
    - "8080:8080"
+  links:
+    - fake-intel
+
+fake-intel:
+  image: quii/mockingjay-server:1.2
+  volumes:
+    - ./fakes:/configs
+  command: -config=/configs/fake-intel.yaml
+  ports:
+   - "9090:9090"
