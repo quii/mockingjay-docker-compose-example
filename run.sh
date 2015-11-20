@@ -1,3 +1,3 @@
 #!/bin/bash
 
-npm install && nodemon -L server.js
+nodemon -L server.js

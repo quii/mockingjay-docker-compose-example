@@ -8,7 +8,7 @@ var PORT = 8080;
 var app = express();
 app.get('/', function (req, res) {
 
-  var mjURL = 'http://fake-intel:9090/intelligence/1986565..';
+  var mjURL = 'http://fake-intel:9090/intelligence/1986565';
 
   request(mjURL, function (error, response, body) {
     if (!error) {
