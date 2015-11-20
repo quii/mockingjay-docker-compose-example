@@ -11,7 +11,7 @@ web:
 fake-intel:
   image: quii/mockingjay-server:1.2
   volumes:
-    - ./fakes:/configs
-  command: -config=/configs/fake-intel.yaml
+    - ./fakes:/fakes
+  command: -config=/fakes/fake-intel.yaml
   ports:
    - "9090:9090"
