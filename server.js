@@ -2,14 +2,13 @@ var express = require('express');
 var request = require('request');
 var redis = require("redis");
 
-var redisClient = redis.createClient('6379', 'redis')
-var app = express();
+const redisClient = redis.createClient('6379', 'redis')
+const app = express();
+const mjURL = 'http://fake-intel:9090/chrisrules';
 
-app.get('/', function (req, res) {
+redisClient.set('some key', 'Chris is the best');
 
-    var mjURL = 'http://fake-intel:9090/chrisrules';
-
-    redisClient.set('some key', 'Chris is the best');
+app.get('/', (req, res) => {
 
     request(mjURL, (error, response, body) => {
 
@@ -21,10 +20,10 @@ app.get('/', function (req, res) {
         }
 
         redisClient.get('some key', (err, reply) => console.log('Got this important information from redis', reply));
-    })
+    });
+
 });
 
-var PORT = 8080;
-
+const PORT = 8080;
 app.listen(PORT);
 console.log('Running on http://localhost:' + PORT);
