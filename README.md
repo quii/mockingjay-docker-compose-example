@@ -13,7 +13,11 @@ Docker compose facilitates this kind of development, by letting you launch a num
 
 [mockingjay](https://github.com/quii/mockingjay-server) is used as a fake server. You should [read here why that's a good idea](https://github.com/quii/mockingjay-server/wiki/Rationale) but in short it can make sure your fake server accurately represents the real API you're calling
 
-Reading the docker-compose.yaml will give you an idea of what's going on
+## System requirements
+
+- docker
+
+Reading the `docker-compose.yaml` will give you an idea of what's going on
 
     docker-compose up
 
