@@ -1,13 +1,2 @@
-FROM    centos:centos6
-
-# Enable Extra Packages for Enterprise Linux (EPEL) for CentOS
-RUN     yum install -y epel-release
-# Install Node.js and npm
-RUN     yum install -y nodejs npm
-
-# Install app dependencies
-ADD ./src /src
-WORKDIR /src
-RUN npm install
-
-CMD ["node", "index.js"]
+FROM node:4-onbuild
+EXPOSE 8080

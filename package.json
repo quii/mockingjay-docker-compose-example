@@ -5,6 +5,10 @@
   "description": "Node.js app connecting to a fake server",
   "author": "Chris James <chris.james@mergermarket.com>",
   "dependencies": {
-    "express": "3.2.4"
+    "express": "3.2.4",
+    "request": "^2.51.0"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
