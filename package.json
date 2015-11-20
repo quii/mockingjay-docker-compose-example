@@ -5,6 +5,7 @@
   "description": "Node.js app connecting to a fake server",
   "author": "Chris James <chris.james@mergermarket.com>",
   "dependencies": {
+    "babel-core": "^6.2.1",
     "express": "3.2.4",
     "redis": "^2.3.1",
     "request": "^2.51.0"
