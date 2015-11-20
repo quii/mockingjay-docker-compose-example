@@ -6,6 +6,7 @@
   "author": "Chris James <chris.james@mergermarket.com>",
   "dependencies": {
     "express": "3.2.4",
+    "redis": "^2.3.1",
     "request": "^2.51.0"
   }
 }
