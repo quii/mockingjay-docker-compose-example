@@ -1,8 +1,8 @@
 "use strict";
 
-var express = require('express');
-var request = require('request-promise');
-var redis = require("redis");
+const express = require('express');
+const request = require('request-promise');
+const redis = require("redis");
 
 const redisClient = redis.createClient('6379', 'redis');
 const app = express();
