@@ -1,0 +1,10 @@
+{
+  "name": "docker-compose-example",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Node.js app connecting to a fake server",
+  "author": "Chris James <chris.james@mergermarket.com>",
+  "dependencies": {
+    "express": "3.2.4"
+  }
+}
