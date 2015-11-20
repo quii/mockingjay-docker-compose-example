@@ -15,3 +15,7 @@ fake-intel:
   command: -config=/fakes/fake-intel.yaml
   ports:
    - "9090:9090"
+   
+# You can add other fake services using the same syntax as above but with different yaml files
+
+# You could also pull in other images for other system dependencies such as databases or whatevs! 
