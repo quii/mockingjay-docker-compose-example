@@ -9,6 +9,7 @@ web:
   volumes:
     - .:/usr/src/app
 
+# You can add other fake services using the same syntax as below but with different yaml files
 fake-intel:
   image: quii/mockingjay-server:1.2
   volumes:
@@ -16,12 +17,9 @@ fake-intel:
   command: -config=/fakes/fake-intel.yaml
   ports:
    - "9090:9090"
-   
-# You can add other fake services using the same syntax as above but with different yaml files
 
+# You could also pull in other images for other system dependencies such as databases or whatevs! 
 redis:
   image: redis
   ports:
     - "6379"
-
-# You could also pull in other images for other system dependencies such as databases or whatevs! 
