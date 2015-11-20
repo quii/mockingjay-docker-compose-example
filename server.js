@@ -8,12 +8,12 @@ var PORT = 8080;
 var app = express();
 app.get('/', function (req, res) {
 
-  var mjURL = 'http://fake-intel:9090/intelligence/1986565xx';
+  var mjURL = 'http://fake-intel:9090/intelligence/1986565..';
 
   request(mjURL, function (error, response, body) {
     if (!error) {
       res.setHeader('content-type', 'text/javascript');
-      res.send(body)
+      res.send(body);
     }else{
       res.send('Couldnt reach MockingJay at', mjURL);
     }

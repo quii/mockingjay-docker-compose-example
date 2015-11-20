@@ -4,6 +4,9 @@ web:
    - "8080:8080"
   links:
     - fake-intel
+  command: ./run.sh
+  volumes:
+    - .:/usr/src/app
 
 fake-intel:
   image: quii/mockingjay-server:1.2
