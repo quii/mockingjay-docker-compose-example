@@ -14,6 +14,7 @@ fake-intel:
   image: quii/mockingjay-server:1.2
   volumes:
     - ./fakes:/fakes
+# The path here is the container volume, NOT the local path
   command: -config=/fakes/fake-intel.yaml
   ports:
    - "9090:9090"
